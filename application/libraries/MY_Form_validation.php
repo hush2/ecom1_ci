@@ -26,9 +26,9 @@ class MY_Form_validation extends CI_Form_validation {
     {
         $this->set_message('verify_password', 'Your current password is incorrect!');
         $ci = get_instance();
-        $result = $ci->user->where('id', $this->session->userdata('id'))
-                           ->where('pass', $ci->users->hash($password))
-                           ->count_all_results('users');
+        $result = $ci->user->db->where('id', $ci->session->userdata('id'))
+                               ->where('pass', $ci->user->hash($password))
+                               ->count_all_results('users');
         return $result ? $password : FALSE;
     }
 
