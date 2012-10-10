@@ -6,6 +6,13 @@ class Renew extends MY_Controller
 
     public function index()
     {
+        if ($this->is_post())
+        {
+            if ($this->user->renew())
+            {
+                redirect('logout');
+            }
+        }
         $this->load_view('account/renew');
     }
 }

@@ -57,6 +57,14 @@ class User_Model extends CI_Model
         }
     }
 
+    public function renew()
+    {
+        $user = $this->db->where('id', $this->session->userdata('id'));
+        $user->set('date_expires', 'ADDDATE(NOW(), INTERVAL 1 MONTH)', FALSE);
+        $user->set('date_modified', 'NOW()', FALSE);
+        return $user->update('users');
+    }
+
     public function hash($password)
     {
         return hash_hmac('sha256', $password, 'rainbow', TRUE);
