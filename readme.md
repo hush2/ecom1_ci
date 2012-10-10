@@ -15,7 +15,6 @@ from his book [Effortless E-Commerce with PHP and MySQL](http://www.larryullman.
 - Upload/Download PDF
 - Most Popular list
 
-
 ## Credits
 
 - [Larry Ullman](http://www.larryullman.com) for original code
