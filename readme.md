@@ -3,7 +3,7 @@
 This is the CodeIgniter version of Larry Ullman's [Knowledge is Power](http://ecom1.dmcinsights.com),
 from his book [Effortless E-Commerce with PHP and MySQL](http://www.larryullman.com/books/effortless-e-commerce-with-php-and-mysql).
 
-Features:
+### Features
 
 - Login/Logout
 - User registration
